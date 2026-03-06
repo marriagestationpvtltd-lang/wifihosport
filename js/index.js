@@ -24,6 +24,7 @@ const IndexObj = {
   loadJson: function (data) {
     I18nObj.init(data);
     this.renderHtml(data);
+    this.renderVenueInfo(data);
   },
 
   initEvent: function () {
@@ -68,6 +69,48 @@ const IndexObj = {
   },
 
   renderHtmlLang: function () {},
+
+  renderVenueInfo: function (data) {
+    const venue = data?.venue;
+    if (!venue) {
+      return;
+    }
+
+    const name = venue.name || "";
+    const address = venue.address || "";
+    const whatsappNumber = venue.whatsapp_number || "";
+
+    if (!name && !address) {
+      return;
+    }
+
+    if (name) {
+      $("#venue_name").text(name);
+    }
+
+    if (address) {
+      $("#venue_address").text(address);
+    }
+
+    if (whatsappNumber && address) {
+      const venueLocationLabel = I18nObj.$t("venue_location");
+      const message = encodeURIComponent(
+        name
+          ? name + "\n" + venueLocationLabel + address
+          : venueLocationLabel + address
+      );
+      const whatsappUrl =
+        "https://wa.me/" +
+        whatsappNumber.replace(/[^0-9]/g, "") +
+        "?text=" +
+        message;
+      $("#whatsapp_btn").attr("href", whatsappUrl);
+    } else {
+      $("#whatsapp_btn").hide();
+    }
+
+    $("#venue_info").show();
+  },
 
   renderLoginHtml: function (loginOptions) {
     // Control priority through styles: Voucher > Account > Oneclick
