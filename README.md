@@ -15,7 +15,8 @@ This file includes the basic configuration for authentication page. Key settings
 * pass for one-click authentication.
 * lang: Specifies the supported languages. Additional languages can be added by updating the corresponding text content in the 
 language.js file.
-css/index.css
+
+## css/index.css
 Controls the look and layout of the authentication page. You can modify colors, fonts, and other layout elements to customize the appearance.
 
 ## js/language.js

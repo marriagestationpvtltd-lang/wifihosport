@@ -55,15 +55,15 @@ body {
 }
 
 .rj-input::-webkit-input-placeholder {
-  color: rgba(255, 255, 255 0.25);
+  color: rgba(255, 255, 255, 0.25);
 }
 
 .rj-input::-moz-placeholder {
-  color: rgba(255, 255, 255 0.25);
+  color: rgba(255, 255, 255, 0.25);
 }
 
 .rj-input:-ms-input-placeholder {
-  color: rgba(255, 255, 255 0.25);
+  color: rgba(255, 255, 255, 0.25);
 }
 
 

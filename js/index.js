@@ -132,6 +132,7 @@ const IndexObj = {
         break;
       case this.LOGIN_OPTION.VOUCHER:
         paramObj.account = $("#voucher_code").val();
+        break;
       case this.LOGIN_OPTION.PASS:
         break;
     }
