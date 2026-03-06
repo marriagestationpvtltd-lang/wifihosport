@@ -341,6 +341,67 @@ body {
   width: 100%;
 }
 
+/* venue info */
+.venue-info-wrapper {
+  width: 100%;
+  text-align: center;
+  padding: 0 32px;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+}
+
+.venue-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.venue-location {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 10px;
+  line-height: 1.5;
+  word-break: break-word;
+  white-space: normal;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+
+.venue-location-label {
+  font-weight: 600;
+}
+
+.venue-address {
+  font-weight: 400;
+}
+
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background-color: #25D366;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 20px;
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.whatsapp-btn:hover {
+  background-color: #1ebe5d;
+}
+
+.whatsapp-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
 /* >= 1200px pc */
 @media screen and (min-width: 1025px) {
   .rj-btn {
@@ -423,5 +484,10 @@ body {
     -webkit-backdrop-filter: blur(89px);
     opacity: 1 !important;
     background-blend-mode: soft-light;
+  }
+
+  .venue-info-wrapper {
+    padding: 0 30px;
+    text-align: left;
   }
 }

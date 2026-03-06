@@ -1,5 +1,10 @@
 loadConfig({
   "post_url": "https://g.page/r/CXn4LyBY3iY7EBM/review",
+  "venue": {
+    "name": "Marriage Station Pvt. Ltd. (Sajilo Bihe)",
+    "address": "Dhapakhel, Lalitpur-24, Bhaisepati Road, Kathmandu, Nepal",
+    "whatsapp_number": "9779851335867"
+  },
   "oneclick": {
     "oneclick_validity": "0",
     "oneclick_qos": {

@@ -11,6 +11,8 @@ const LandObj = {
     one_click_login: "One-click Login",
     account_login: "Account Login",
     voucher_login: "Voucher Login",
+    venue_location: "Venue Location: ",
+    contact_whatsapp: "Contact on WhatsApp",
   },
   es_ES: {
     please_enter_account: "Introduzca el nombre de usuario.",
@@ -24,5 +26,7 @@ const LandObj = {
     one_click_login: "Un solo clic",
     account_login: "Cuenta",
     voucher_login: "Gutschein-Anmeldung",
+    venue_location: "Ubicación del lugar: ",
+    contact_whatsapp: "Contactar por WhatsApp",
   },
 };
