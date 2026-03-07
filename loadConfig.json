@@ -6,12 +6,12 @@ loadConfig({
     "whatsapp_number": "9779851335867"
   },
   "oneclick": {
-    "oneclick_validity": "0",
+    "oneclick_validity": "480",
     "oneclick_qos": {
-      "up_rate": "0",
-      "down_rate": "0"
+      "up_rate": "5120",
+      "down_rate": "10240"
     },
-    "oneclick_times": "0"
+    "oneclick_times": "3"
   },
   "custom_html": {
     "login_options": [
