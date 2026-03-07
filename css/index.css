@@ -402,7 +402,65 @@ body {
   flex-shrink: 0;
 }
 
-/* >= 1200px pc */
+/* wifi connection status */
+.wifi-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  min-height: 24px;
+}
+
+.wifi-status .status-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.wifi-status.status-connecting .status-icon {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  animation: wifi-spin 0.8s linear infinite;
+}
+
+.wifi-status.status-connecting .status-text {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.wifi-status.status-success .status-icon {
+  background: #25D366;
+  position: relative;
+}
+
+.wifi-status.status-success .status-icon::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 1px;
+  width: 5px;
+  height: 9px;
+  border: 2px solid #fff;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg);
+}
+
+.wifi-status.status-success .status-text {
+  color: #25D366;
+}
+
+@keyframes wifi-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
 @media screen and (min-width: 1025px) {
   .rj-btn {
     font-size: 14px;

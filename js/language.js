@@ -13,6 +13,9 @@ const LandObj = {
     voucher_login: "Voucher Login",
     venue_location: "Venue Location: ",
     contact_whatsapp: "Contact on WhatsApp",
+    connecting: "Connecting to WiFi\u2026",
+    connected: "Connected! Opening review page\u2026",
+    connection_failed: "Connection failed. Please try again.",
   },
   es_ES: {
     please_enter_account: "Introduzca el nombre de usuario.",
@@ -28,5 +31,8 @@ const LandObj = {
     voucher_login: "Gutschein-Anmeldung",
     venue_location: "Ubicación del lugar: ",
     contact_whatsapp: "Contactar por WhatsApp",
+    connecting: "Conectando al WiFi\u2026",
+    connected: "\u00a1Conectado! Abriendo página de reseña\u2026",
+    connection_failed: "Conexión fallida. Por favor, inténtelo de nuevo.",
   },
 };
