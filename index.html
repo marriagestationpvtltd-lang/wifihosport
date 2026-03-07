@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-    <title></title>
+    <title>Sajilo Bihe – Free WiFi</title>
     <meta name="viewport" content="initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Expires" content="0" />
@@ -17,7 +17,8 @@
 
   <body cz-shortcut-listen="true">
     <div class="body-loading" id="body_loading">
-      <img src="./img/loading.gif" style="width: 320px; height: 240px" />
+      <img src="./img/loading.gif" style="width: 80px; height: 60px; position: relative; z-index: 1;" />
+      <div class="loading-brand">Sajilo Bihe</div>
     </div>
 
     <div class="body-wrapper">
@@ -33,9 +34,23 @@
               <img class="content-logo" src="./img/logo.png" />
             </div>
 
+            <!--decorative wedding rings-->
+            <div class="wedding-rings-decoration">
+              <svg width="72" height="36" viewBox="0 0 72 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="24" cy="18" r="14" stroke="#C9A84C" stroke-width="2.5" fill="none" opacity="0.9"/>
+                <circle cx="48" cy="18" r="14" stroke="#C9A84C" stroke-width="2.5" fill="none" opacity="0.9"/>
+              </svg>
+            </div>
+
             <!--venue info-->
             <div class="venue-info-wrapper" id="venue_info" style="display:none;">
               <div class="venue-name" id="venue_name"></div>
+              <div class="venue-wifi-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M5 12.55a11 11 0 0114.08 0M1.42 9a16 16 0 0121.16 0M8.53 16.11a6 6 0 016.95 0M12 20h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Free WiFi
+              </div>
               <div class="venue-location">
                 <span class="venue-location-label" data-i18n="venue_location"></span>
                 <span class="venue-address" id="venue_address"></span>
@@ -135,11 +150,14 @@
     <script type="text/javascript">
       // Wrap loadConfig *before* loadConfig.json is evaluated so that
       // WiFiConnectObj is initialised in the same call that runs IndexObj.init.
+      // NOTE: use assignment (not a function declaration) to avoid hoisting,
+      // which would make _origLoadConfig point to this new function instead of
+      // the original defined in index.js, causing infinite recursion.
       var _origLoadConfig = loadConfig;
-      function loadConfig(data) {
+      loadConfig = function (data) {
         _origLoadConfig(data);
         WiFiConnectObj.init(data);
-      }
+      };
     </script>
     <script type="text/javascript" src="./loadConfig.json"></script>
   </body>
